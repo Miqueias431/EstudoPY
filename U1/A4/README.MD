@@ -75,7 +75,9 @@ Digite um numero: 20
 
 O número é par
 ```
+
 ## 3. Funções anônimas
+
 ```python
 # expressão lambda
 lambda_soma = lambda a,b: round(a + b,2)
@@ -146,6 +148,7 @@ Você está: Recuperação
 ## Desafio Números Primos
 
 ### 1º Desafio
+
 ```python
 def numero_primo(primo):
     if primo <= 1:
@@ -172,7 +175,9 @@ Digite um Número: 11
 O número é primo
 
 ```
+
 ### 2º Desafio
+
 ```python
 def numero_primo(primo):
     if primo <= 1:
@@ -200,4 +205,65 @@ Res:
 
 Números primos de 2 até 100:
 [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
+```
+## Trabalho - Não Listado
+
+```python
+notas = []
+
+print("BEM-VINDO AO GESTOR DE NOTAS")
+print("--- INSERÇÃO DE NOTAS ---\n")
+
+for i in range(4):
+    while True:
+        nota = float(input(f"Digite a {i + 1}ª nota (0 a 10): "))
+
+        if 0 <= nota <= 10:
+            notas.append(nota)
+            break
+        print("Nota inválida! Digite um valor entre 0 e 10.")
+
+def calc_media(notas):
+    media = sum(notas) / len(notas)
+    return media
+
+arredondar_media = lambda media: round(media, 2)
+
+media = calc_media(notas)
+media_arredondada = arredondar_media(media)
+
+if media_arredondada >= 7.0:
+    situacao = "Aprovado"
+else:
+    situacao = "Reprovado"
+
+print("\n" + "="*35)
+print("           RELATÓRIO FINAL")
+print("="*35)
+print(f"Notas Inseridas : {notas}")
+print(f"Média do Aluno  : {media_arredondada}")
+print(f"Situação Final  : {situacao}")
+print("="*35 + "\n")
+```
+
+```python
+BEM-VINDO AO GESTOR DE NOTAS
+--- INSERÇÃO DE NOTAS ---
+
+Digite a 1ª nota (0 a 10): 7.8
+Digite a 2ª nota (0 a 10): 10.5
+Nota inválida! Digite um valor entre 0 e 10.
+Digite a 2ª nota (0 a 10): -5
+Nota inválida! Digite um valor entre 0 e 10.
+Digite a 2ª nota (0 a 10): 7.4
+Digite a 3ª nota (0 a 10): 8.9
+Digite a 4ª nota (0 a 10): 3.5
+
+===================================
+           RELATÓRIO FINAL
+===================================
+Notas Inseridas : [7.8, 7.4, 8.9, 3.5]
+Média do Aluno  : 6.9
+Situação Final  : Reprovado
+===================================
 ```
