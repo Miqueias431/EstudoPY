@@ -1,0 +1,19 @@
+# Operadores Relacionais
+
+print(10 < 20)  # Menor que...
+print(10 <= 20)  # Menor igual que...
+print(10 > 20)  # Maior que...
+print(10 >= 20)  # Maior igual que...
+print(10 == 20)  # igual que...
+print(10 != 20)  # Diferente de...
+
+# Exemplo de Usando Operadores
+
+idade = 18
+e_maior_de_idade = idade >=18
+print(e_maior_de_idade)
+
+if e_maior_de_idade == True:
+  print("Pode dirigir")
+else:
+  print("Não pode dirigir")
